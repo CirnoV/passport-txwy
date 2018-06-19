@@ -1,8 +1,17 @@
 # passport-txwy
 > Txwy authentication for node.js
 
+## Install
+```bash
+$ git clone https://github.com/CirnoV/passport-txwy.git
+$ cd passport-txwy
+$ yarn
+```
+
 ## Example
 ```javascript
+import login from 'passport-txwy';
+
 const {sid} = login({username, password, appInfo, deviceInfo});
 ```
  - 23시간 30분이 지나면 sid는 자동으로 만료됩니다.
