@@ -8,9 +8,11 @@ $ yarn add passport-txwy
 
 ## Example
 ```javascript
-import login from 'passport-txwy';
+import {login} from 'passport-txwy';
 
-const {sid} = login({username, password, appInfo, deviceInfo});
+(async () => {
+  const {uid, sid} = await login({username, password, appInfo, deviceInfo});
+})()
 ```
  - 23시간 30분이 지나면 sid는 자동으로 만료됩니다.
 
