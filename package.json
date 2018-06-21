@@ -1,6 +1,6 @@
 {
   "name": "passport-txwy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Txwy authentication for node.js",
   "main": "./dist/index.js",
   "repository": "https://github.com/CirnoV/passport-txwy.git",
