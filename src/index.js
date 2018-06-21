@@ -4,10 +4,9 @@ import getSig from './sig';
 
 const cometVersion = 2;
 
-export function login({username, password, appInfo, deviceInfo} = {}) {
+export async function login({username, password, appInfo, deviceInfo} = {}) {
   const {id, key, fuid, version, buildNum, adid, platform, locale} = appInfo;
   const {dev, cpu, deviceId, mac, os, fbl, imei, men} = deviceInfo;
-
   const requestData = {
     appid: id,
     ver: cometVersion,
@@ -33,5 +32,5 @@ export function login({username, password, appInfo, deviceInfo} = {}) {
     platform,
   };
 
-  return post('http://p-kr.playcomet.com/api2/signin', {...requestData, sig: getSig({data: requestData, appKey: key})});
+  return JSON.parse(await post('http://p-kr.playcomet.com/api2/signin', {...requestData, sig: getSig({data: requestData, appKey: key})}));
 }
