@@ -3,9 +3,7 @@
 
 ## Install
 ```bash
-$ git clone https://github.com/CirnoV/passport-txwy.git
-$ cd passport-txwy
-$ yarn
+$ yarn add passport-txwy
 ```
 
 ## Example
